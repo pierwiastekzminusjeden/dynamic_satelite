@@ -25,11 +25,8 @@ const init = (width, height) => {
 		const nearPlane = 1; 
 		const farPlane = 10000000;
 		camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-		camera.position.x = 200;
 		camera.position.z = 600;
-		camera.position.y = 150;
-		camera.rotation.y = .5;
-		camera.rotation.x = .01;
+
 
 		
 		const handleWindowResize = () => {
@@ -245,9 +242,9 @@ const createWorld = () => {
 }
 
 const updateWorld = () => {
-	planet.mesh.rotation.z += .0002;
-	planet.mesh.rotation.x += .0005;
-	ring.mesh.rotation.z -= .005;
+	planet.mesh.rotation.z += .001;
+	planet.mesh.rotation.x += .005;
+	ring.mesh.rotation.z -= .01;
 };
 
 
